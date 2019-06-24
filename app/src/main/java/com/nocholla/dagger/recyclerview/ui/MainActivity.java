@@ -83,8 +83,9 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     }
 
     @Override
-    public void launchIntent(String filmName) {
-
+    public void launchIntent(String url) {
+        Toast.makeText(mContext, "RecyclerView Row selected", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(activityContext, DetailActivity.class).putExtra("url", url));
     }
 }
 
