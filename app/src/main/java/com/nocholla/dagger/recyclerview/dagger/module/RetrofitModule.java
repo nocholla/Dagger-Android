@@ -2,6 +2,7 @@ package com.nocholla.dagger.recyclerview.dagger.module;
 
 import com.nocholla.dagger.recyclerview.dagger.scopes.ApplicationScope;
 import com.nocholla.dagger.recyclerview.retrofit.APIInterface;
+import com.nocholla.dagger.recyclerview.util.Constants;
 
 import dagger.Module;
 import dagger.Provides;
@@ -23,7 +24,7 @@ public class RetrofitModule {
     @ApplicationScope
     Retrofit getRetrofit(OkHttpClient okHttpClient) {
         return new Retrofit.Builder()
-                .baseUrl("https://swapi.co/api/")
+                .baseUrl(Constants.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();
