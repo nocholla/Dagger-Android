@@ -33,7 +33,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.txtName.setText(data.get(position).name);
-        holder.txtBirthYear.setText(data.get(position).birthYear);
+        holder.txtBirthYear.setText("Birth Year : " + data.get(position).birthYear);
+        holder.txtGender.setText("Gender : " + data.get(position).gender);
+        holder.txtHeight.setText("Height : " + data.get(position).height);
+        holder.txtMass.setText("Mass : " + data.get(position).mass);
     }
 
     @Override
@@ -45,6 +48,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         private TextView txtName;
         private TextView txtBirthYear;
+        private TextView txtGender;
+        private TextView txtHeight;
+        private TextView txtMass;
         private ConstraintLayout constraintLayoutContainer;
 
         ViewHolder(View itemView) {
@@ -52,6 +58,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             txtName = itemView.findViewById(R.id.txtName);
             txtBirthYear = itemView.findViewById(R.id.txtBirthYear);
+            txtGender = itemView.findViewById(R.id.txtGender);
+            txtHeight = itemView.findViewById(R.id.txtHeight);
+            txtMass = itemView.findViewById(R.id.txtMass);
             constraintLayoutContainer = itemView.findViewById(R.id.constraintLayout);
 
             constraintLayoutContainer.setOnClickListener(new View.OnClickListener() {

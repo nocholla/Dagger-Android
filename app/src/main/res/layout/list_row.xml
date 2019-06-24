@@ -36,7 +36,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <!-- Report Title -->
+                    <!-- Name -->
                     <TextView
                         android:id="@+id/txtName"
                         android:layout_width="@dimen/width_zero"
@@ -56,7 +56,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <!-- Report Description -->
+                    <!-- Birth Year -->
                     <TextView
                         android:id="@+id/txtBirthYear"
                         android:layout_width="@dimen/width_zero"
@@ -71,6 +71,61 @@
                         android:maxLines="3"
                         android:ellipsize="end"
                         app:layout_constraintTop_toBottomOf="@+id/txtName"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <!-- Gender -->
+                    <TextView
+                        android:id="@+id/txtGender"
+                        android:layout_width="@dimen/width_zero"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_eight"
+                        android:layout_marginLeft="@dimen/margin_eight"
+                        android:layout_marginEnd="@dimen/margin_eight"
+                        android:layout_marginRight="@dimen/margin_eight"
+                        android:textColor="@color/text_grey"
+                        android:text="Male"
+                        android:textSize="@dimen/text_twelve"
+                        android:maxLines="3"
+                        android:ellipsize="end"
+                        app:layout_constraintTop_toBottomOf="@+id/txtBirthYear"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <!-- Height -->
+                    <TextView
+                        android:id="@+id/txtHeight"
+                        android:layout_width="@dimen/width_zero"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_eight"
+                        android:layout_marginLeft="@dimen/margin_eight"
+                        android:layout_marginEnd="@dimen/margin_eight"
+                        android:layout_marginRight="@dimen/margin_eight"
+                        android:textColor="@color/text_grey"
+                        android:text="77 Ft"
+                        android:textSize="@dimen/text_twelve"
+                        android:maxLines="3"
+                        android:ellipsize="end"
+                        app:layout_constraintTop_toBottomOf="@+id/txtGender"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <!-- Mass -->
+                    <TextView
+                        android:id="@+id/txtMass"
+                        android:layout_width="@dimen/width_zero"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_eight"
+                        android:layout_marginLeft="@dimen/margin_eight"
+                        android:layout_marginEnd="@dimen/margin_eight"
+                        android:layout_marginRight="@dimen/margin_eight"
+                        android:paddingBottom="@dimen/padding_eight"
+                        android:textColor="@color/text_grey"
+                        android:text="172 Pounds"
+                        android:textSize="@dimen/text_twelve"
+                        android:maxLines="3"
+                        android:ellipsize="end"
+                        app:layout_constraintTop_toBottomOf="@+id/txtHeight"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" />
 
