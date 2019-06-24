@@ -12,6 +12,7 @@ import com.nocholla.dagger.recyclerview.MyApplication;
 import com.nocholla.dagger.recyclerview.R;
 import com.nocholla.dagger.recyclerview.adapter.RecyclerViewAdapter;
 import com.nocholla.dagger.recyclerview.dagger.component.ApplicationComponent;
+import com.nocholla.dagger.recyclerview.dagger.component.DaggerMainActivityComponent;
 import com.nocholla.dagger.recyclerview.dagger.component.MainActivityComponent;
 import com.nocholla.dagger.recyclerview.dagger.module.MainActivityContextModule;
 import com.nocholla.dagger.recyclerview.dagger.qualifier.ActivityContext;
@@ -29,10 +30,56 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements RecyclerViewAdapter.ClickListener {
 
+    private RecyclerView recyclerView;
+    MainActivityComponent mainActivityComponent;
+
+    @Inject
+    public RecyclerViewAdapter recyclerViewAdapter;
+
+    @Inject
+    public APIInterface apiInterface;
+
+    @Inject
+    @ApplicationContext
+    public Context mContext;
+
+    @Inject
+    @ActivityContext
+    public Context activityContext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+
+        ApplicationComponent applicationComponent = MyApplication.get(this).getApplicationComponent();
+        mainActivityComponent = DaggerMainActivityComponent.builder()
+                .mainActivityContextModule(new MainActivityContextModule(this))
+                .applicationComponent(applicationComponent)
+                .build();
+
+        mainActivityComponent.injectMainActivity(this);
+        recyclerView.setAdapter(recyclerViewAdapter);
+
+        // Retrofit
+        apiInterface.getPeople("json").enqueue(new Callback<StarWars>() {
+            @Override
+            public void onResponse(Call<StarWars> call, Response<StarWars> response) {
+                populateRecyclerView(response.body().results);
+            }
+
+            @Override
+            public void onFailure(Call<StarWars> call, Throwable t) {
+
+            }
+        });
+    }
+
+    private void populateRecyclerView(List<StarWars.People> response) {
+        recyclerViewAdapter.setData(response);
     }
 
     @Override
