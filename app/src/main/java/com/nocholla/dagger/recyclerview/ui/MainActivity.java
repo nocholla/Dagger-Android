@@ -18,7 +18,7 @@ import com.nocholla.dagger.recyclerview.di.module.MainActivityContextModule;
 import com.nocholla.dagger.recyclerview.di.qualifier.ActivityContext;
 import com.nocholla.dagger.recyclerview.di.qualifier.ApplicationContext;
 import com.nocholla.dagger.recyclerview.model.StarWars;
-import com.nocholla.dagger.recyclerview.api.APIInterface;
+import com.nocholla.dagger.recyclerview.api.ApiServiceInterface;
 
 import java.util.List;
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     public RecyclerViewAdapter recyclerViewAdapter;
 
     @Inject
-    public APIInterface apiInterface;
+    public ApiServiceInterface apiServiceInterface;
 
     @Inject
     @ApplicationContext
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
         recyclerView.setAdapter(recyclerViewAdapter);
 
         // Retrofit
-        apiInterface.getPeople("json").enqueue(new Callback<StarWars>() {
+        apiServiceInterface.getPeople("json").enqueue(new Callback<StarWars>() {
             @Override
             public void onResponse(Call<StarWars> call, Response<StarWars> response) {
                 populateRecyclerView(response.body().results);

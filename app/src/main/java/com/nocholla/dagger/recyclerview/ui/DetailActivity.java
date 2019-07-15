@@ -7,12 +7,12 @@ import android.widget.TextView;
 
 import com.nocholla.dagger.recyclerview.MyApplication;
 import com.nocholla.dagger.recyclerview.R;
+import com.nocholla.dagger.recyclerview.api.ApiServiceInterface;
 import com.nocholla.dagger.recyclerview.di.component.ApplicationComponent;
 import com.nocholla.dagger.recyclerview.di.component.DaggerDetailActivityComponent;
 import com.nocholla.dagger.recyclerview.di.component.DetailActivityComponent;
 import com.nocholla.dagger.recyclerview.di.qualifier.ApplicationContext;
 import com.nocholla.dagger.recyclerview.model.Film;
-import com.nocholla.dagger.recyclerview.api.APIInterface;
 
 import javax.inject.Inject;
 
@@ -25,7 +25,7 @@ public class DetailActivity extends AppCompatActivity {
     DetailActivityComponent detailActivityComponent;
 
     @Inject
-    public APIInterface apiInterface;
+    public ApiServiceInterface apiServiceInterface;
 
     @Inject
     @ApplicationContext
@@ -49,7 +49,7 @@ public class DetailActivity extends AppCompatActivity {
 
         detailActivityComponent.inject(this);
 
-        apiInterface.getFilmData(url, "json").enqueue(new Callback<Film>() {
+        apiServiceInterface.getFilmData(url, "json").enqueue(new Callback<Film>() {
             @Override
             public void onResponse(Call<Film> call, Response<Film> response) {
                 Film films = response.body();

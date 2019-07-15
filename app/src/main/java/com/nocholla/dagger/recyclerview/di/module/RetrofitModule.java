@@ -1,7 +1,7 @@
 package com.nocholla.dagger.recyclerview.di.module;
 
+import com.nocholla.dagger.recyclerview.api.ApiServiceInterface;
 import com.nocholla.dagger.recyclerview.di.scopes.ApplicationScope;
-import com.nocholla.dagger.recyclerview.api.APIInterface;
 import com.nocholla.dagger.recyclerview.util.Constants;
 
 import dagger.Module;
@@ -16,8 +16,8 @@ public class RetrofitModule {
 
     @Provides
     @ApplicationScope
-    APIInterface getApiInterface(Retrofit retroFit) {
-        return retroFit.create(APIInterface.class);
+    ApiServiceInterface getApiInterface(Retrofit retroFit) {
+        return retroFit.create(ApiServiceInterface.class);
     }
 
     @Provides
