@@ -12,7 +12,7 @@ public class AdapterModule {
 
     @Provides
     @ActivityScope
-    public RecyclerViewAdapter getStarWarsPeopleLIst(RecyclerViewAdapter.ClickListener clickListener) {
+    public RecyclerViewAdapter getStarWarsPeopleList(RecyclerViewAdapter.ClickListener clickListener) {
         return new RecyclerViewAdapter(clickListener);
     }
 
