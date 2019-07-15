@@ -7,12 +7,12 @@ import android.widget.TextView;
 
 import com.nocholla.dagger.recyclerview.MyApplication;
 import com.nocholla.dagger.recyclerview.R;
-import com.nocholla.dagger.recyclerview.dagger.component.ApplicationComponent;
-import com.nocholla.dagger.recyclerview.dagger.component.DaggerDetailActivityComponent;
-import com.nocholla.dagger.recyclerview.dagger.component.DetailActivityComponent;
-import com.nocholla.dagger.recyclerview.dagger.qualifier.ApplicationContext;
+import com.nocholla.dagger.recyclerview.di.component.ApplicationComponent;
+import com.nocholla.dagger.recyclerview.di.component.DaggerDetailActivityComponent;
+import com.nocholla.dagger.recyclerview.di.component.DetailActivityComponent;
+import com.nocholla.dagger.recyclerview.di.qualifier.ApplicationContext;
 import com.nocholla.dagger.recyclerview.model.Film;
-import com.nocholla.dagger.recyclerview.retrofit.APIInterface;
+import com.nocholla.dagger.recyclerview.api.APIInterface;
 
 import javax.inject.Inject;
 

@@ -1,6 +1,6 @@
-package com.nocholla.dagger.recyclerview.dagger.component;
+package com.nocholla.dagger.recyclerview.di.component;
 
-import com.nocholla.dagger.recyclerview.dagger.scopes.ActivityScope;
+import com.nocholla.dagger.recyclerview.di.scopes.ActivityScope;
 import com.nocholla.dagger.recyclerview.ui.DetailActivity;
 
 import dagger.Component;

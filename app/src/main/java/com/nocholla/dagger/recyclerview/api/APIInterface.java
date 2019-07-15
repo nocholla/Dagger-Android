@@ -1,4 +1,4 @@
-package com.nocholla.dagger.recyclerview.retrofit;
+package com.nocholla.dagger.recyclerview.api;
 
 import com.nocholla.dagger.recyclerview.model.Film;
 import com.nocholla.dagger.recyclerview.model.StarWars;

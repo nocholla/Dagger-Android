@@ -1,10 +1,10 @@
-package com.nocholla.dagger.recyclerview.dagger.module;
+package com.nocholla.dagger.recyclerview.di.module;
 
 import android.content.Context;
 
 import com.nocholla.dagger.recyclerview.ui.MainActivity;
-import com.nocholla.dagger.recyclerview.dagger.qualifier.ActivityContext;
-import com.nocholla.dagger.recyclerview.dagger.scopes.ActivityScope;
+import com.nocholla.dagger.recyclerview.di.qualifier.ActivityContext;
+import com.nocholla.dagger.recyclerview.di.scopes.ActivityScope;
 
 import dagger.Module;
 import dagger.Provides;

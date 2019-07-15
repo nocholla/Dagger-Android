@@ -11,14 +11,14 @@ import android.widget.Toast;
 import com.nocholla.dagger.recyclerview.MyApplication;
 import com.nocholla.dagger.recyclerview.R;
 import com.nocholla.dagger.recyclerview.adapter.RecyclerViewAdapter;
-import com.nocholla.dagger.recyclerview.dagger.component.ApplicationComponent;
-import com.nocholla.dagger.recyclerview.dagger.component.DaggerMainActivityComponent;
-import com.nocholla.dagger.recyclerview.dagger.component.MainActivityComponent;
-import com.nocholla.dagger.recyclerview.dagger.module.MainActivityContextModule;
-import com.nocholla.dagger.recyclerview.dagger.qualifier.ActivityContext;
-import com.nocholla.dagger.recyclerview.dagger.qualifier.ApplicationContext;
+import com.nocholla.dagger.recyclerview.di.component.ApplicationComponent;
+import com.nocholla.dagger.recyclerview.di.component.DaggerMainActivityComponent;
+import com.nocholla.dagger.recyclerview.di.component.MainActivityComponent;
+import com.nocholla.dagger.recyclerview.di.module.MainActivityContextModule;
+import com.nocholla.dagger.recyclerview.di.qualifier.ActivityContext;
+import com.nocholla.dagger.recyclerview.di.qualifier.ApplicationContext;
 import com.nocholla.dagger.recyclerview.model.StarWars;
-import com.nocholla.dagger.recyclerview.retrofit.APIInterface;
+import com.nocholla.dagger.recyclerview.api.APIInterface;
 
 import java.util.List;
 

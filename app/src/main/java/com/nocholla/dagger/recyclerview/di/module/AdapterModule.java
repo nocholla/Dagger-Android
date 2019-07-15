@@ -1,7 +1,7 @@
-package com.nocholla.dagger.recyclerview.dagger.module;
+package com.nocholla.dagger.recyclerview.di.module;
 
 import com.nocholla.dagger.recyclerview.adapter.RecyclerViewAdapter;
-import com.nocholla.dagger.recyclerview.dagger.scopes.ActivityScope;
+import com.nocholla.dagger.recyclerview.di.scopes.ActivityScope;
 import com.nocholla.dagger.recyclerview.ui.MainActivity;
 
 import dagger.Module;

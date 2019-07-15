@@ -1,7 +1,7 @@
-package com.nocholla.dagger.recyclerview.dagger.module;
+package com.nocholla.dagger.recyclerview.di.module;
 
-import com.nocholla.dagger.recyclerview.dagger.scopes.ApplicationScope;
-import com.nocholla.dagger.recyclerview.retrofit.APIInterface;
+import com.nocholla.dagger.recyclerview.di.scopes.ApplicationScope;
+import com.nocholla.dagger.recyclerview.api.APIInterface;
 import com.nocholla.dagger.recyclerview.util.Constants;
 
 import dagger.Module;

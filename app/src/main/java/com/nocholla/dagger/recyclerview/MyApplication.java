@@ -3,9 +3,9 @@ package com.nocholla.dagger.recyclerview;
 import android.app.Activity;
 import android.app.Application;
 
-import com.nocholla.dagger.recyclerview.dagger.component.ApplicationComponent;
-import com.nocholla.dagger.recyclerview.dagger.component.DaggerApplicationComponent;
-import com.nocholla.dagger.recyclerview.dagger.module.ContextModule;
+import com.nocholla.dagger.recyclerview.di.component.ApplicationComponent;
+import com.nocholla.dagger.recyclerview.di.component.DaggerApplicationComponent;
+import com.nocholla.dagger.recyclerview.di.module.ContextModule;
 
 public class MyApplication extends Application {
 

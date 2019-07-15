@@ -1,14 +1,13 @@
-package com.nocholla.dagger.recyclerview.dagger.component;
+package com.nocholla.dagger.recyclerview.di.component;
 
 import android.content.Context;
 
-import com.nocholla.dagger.recyclerview.dagger.module.AdapterModule;
-import com.nocholla.dagger.recyclerview.dagger.qualifier.ActivityContext;
-import com.nocholla.dagger.recyclerview.dagger.scopes.ActivityScope;
+import com.nocholla.dagger.recyclerview.di.module.AdapterModule;
+import com.nocholla.dagger.recyclerview.di.qualifier.ActivityContext;
+import com.nocholla.dagger.recyclerview.di.scopes.ActivityScope;
 import com.nocholla.dagger.recyclerview.ui.MainActivity;
 
 import dagger.Component;
-
 
 @ActivityScope
 @Component(modules = AdapterModule.class, dependencies = ApplicationComponent.class)

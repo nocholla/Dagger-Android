@@ -1,4 +1,4 @@
-package com.nocholla.dagger.recyclerview.dagger.qualifier;
+package com.nocholla.dagger.recyclerview.di.qualifier;
 
 import javax.inject.Qualifier;
 

@@ -1,4 +1,4 @@
-package com.nocholla.dagger.recyclerview.dagger.scopes;
+package com.nocholla.dagger.recyclerview.di.scopes;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
